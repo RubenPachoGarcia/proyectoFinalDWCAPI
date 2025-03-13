@@ -52,8 +52,9 @@ public class TokenServicio {
 
         String enlaceRecuperacion = "http://localhost:4200/cambiar-contrasenia?token=" + token;
         
-        correoServicio.enviarCorreo(correoUsuario, "Recuperación de Clave",
-                "Para restablecer tu contraseña, haz clic en el siguiente enlace: " + enlaceRecuperacion);
+        correoServicio.enviarCorreo(correoUsuario, "Recuperación de Contraseña",
+        		"<p>Haga clic en el siguiente enlace para cambiar su contraseña:</p>"
+                        + "<p><a href='" + enlaceRecuperacion);
         System.out.println("Correo de recuperación enviado a: " + correoUsuario);
     }
 
